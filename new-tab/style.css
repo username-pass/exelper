@@ -14,7 +14,14 @@ body {
   top: 0px;
   left: 0px;
   padding: 20px;
+}
+
+.name {
   font-size: 20px;
+}
+
+.version {
+  font: bold 14px monospace;
 }
 
 .top-right {
@@ -46,6 +53,18 @@ body {
   font-size: 15px;
 }
 
+.bottom-left {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.bottom-right {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
 svg {
   color: white;
   filter: brightness(0) invert(1);
@@ -62,4 +81,14 @@ svg:hover {
 
 #move {
   cursor: move;
+}
+
+/* alternate mode */
+
+body.black-text {
+  color: black;
+}
+
+body.black-text svg {
+  filter: brightness(0);
 }

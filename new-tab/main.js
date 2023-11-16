@@ -2,9 +2,9 @@ import { DragController } from "./drag-controller.js";
 import { FullscreenController } from "./fullscreen-controller.js";
 import { BatteryDisplay } from "./battery-display.js";
 import { TimeDisplay } from "./time-display.js";
+import { BackgroundController } from "./background-controller.js";
 
-const THEME_URL_1 = "chrome://customize-chrome-side-panel.top-chrome";
-const THEME_URL_2 = "chrome://personalization";
+const NEW_TAB_URL = "chrome://new-tab-page";
 const FILES_URL = "chrome://file-manager";
 const HELP_URL = "https://github.com/bypassiwastaken/skiovox-helper";
 const WEBSTORE_URL = "https://chromewebstore.google.com";
@@ -17,15 +17,20 @@ let [
     webStore,
     addAccount,
     move,
-    fullscreen
+    fullscreen,
+    colorChange,
+    reset
 ] = document.querySelectorAll('svg')
 
+let version = document.querySelector('.version')
 let time = document.querySelector('.time')
 let battery = document.querySelector('.battery')
 
+version.textContent = "v" + chrome.runtime.getManifest().version
+
 theme.addEventListener('click', () => {
-    chrome.tabs.create({ url: THEME_URL_1 })
-    chrome.tabs.create({ url: THEME_URL_2 })
+    alert("The original New Tab page will now open. On that page, click the edit icon in the bottom right corner to edit your browser theme.")
+    chrome.tabs.create({ url: NEW_TAB_URL })
 })
 
 files.addEventListener('click', () => {
@@ -51,7 +56,15 @@ addAccount.addEventListener('click', () => {
     chrome.tabs.create({ url: ADDSESSION_URL })
 })
 
+reset.addEventListener('click', () => {
+    if (confirm("Are you sure you want to reset Skiovox helper settings?")) {
+        localStorage.clear()
+        chrome.runtime.reload()
+    }
+})
+
 new DragController(move);
 new FullscreenController(fullscreen);
 new BatteryDisplay(battery);
 new TimeDisplay(time);
+new BackgroundController(colorChange);
