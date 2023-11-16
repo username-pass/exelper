@@ -1,5 +1,5 @@
 # Exelper -- the helper extension 
-**Installation steps can be seen at the "stage 3" section on [skiovox.com](https://skiovox.com)**
+**Installation steps can be seen at the "stage 3" section on [the pdf](https://github.com/username-pass/exelper/blob/e7527fbbeac51dddd4baf7097b1717f0b6a8e4d0/files/skiovox.pdf)**
 
 This extension:
 
