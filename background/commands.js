@@ -80,6 +80,14 @@ function onCommand(name, tab) {
         });
       })
       break;
+    case "BOOKMARK_CURRENT":
+      chrome.tabs.query({ active: true, lastFocusedWindow: true }, ([tab]) => {
+        chrome.bookmarks.create(
+          {"title": tab.title, "url": tab.url}
+        );
+      });
+      break;
+    
 
     case "CTRL_1":
     case "CTRL_2":
