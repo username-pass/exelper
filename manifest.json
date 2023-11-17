@@ -35,6 +35,9 @@
     "SWITCH_WINDOWS": {
       "description": "Switch windows: Alt+Q"
     },
+    "BOOKMARK_CURRENT": {
+      "description": "Ctrl-D"
+    },
     "CTRL_1": {
       "description": "Ctrl+1"
     },
