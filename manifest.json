@@ -73,6 +73,12 @@
   "chrome_url_overrides": {
     "newtab": "/new-tab/main.html"
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-scripts/taskbar.js"]
+    }
+  ],
   "permissions": [
     "commands",
     "tabs",
