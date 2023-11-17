@@ -83,6 +83,7 @@
     "commands",
     "tabs",
     "sessions",
+    "bookmarks",
     "<all_urls>"
   ]
 }
