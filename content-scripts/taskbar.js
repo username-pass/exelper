@@ -81,6 +81,7 @@ document.head.appendChild(taskbarStyleElement);
 var bottomTaskbarElement = document.createElement('div');
 
 bottomTaskbarElement.innerHTML = `
+<div id="eXelper-taskbar">
 
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
@@ -212,26 +213,27 @@ bottomTaskbarElement.innerHTML = `
           </span>
         </span>
       </span>
+</div>
       `;
 
-bottomTaskbarElement.id = "eXelper-taskbar";
-bottomTaskbarElement.style.width= "100%";
-bottomTaskbarElement.style.height= "45px";
-bottomTaskbarElement.style.backgroundImage= "linear-gradient(to right top, #403539CC, #453b41CC, #494248CC, #4e484fCC, #524f56CC);";
-bottomTaskbarElement.style.backdropFilter= "blur(15px);";
-bottomTaskbarElement.style.position= "fixed";
-bottomTaskbarElement.style.bottom= "-44px";
-bottomTaskbarElement.style.transitionDuration= "0.5s";
-bottomTaskbarElement.style.borderTopLeftRadius= "25px";
-bottomTaskbarElement.style.borderTopRightRadius= "25px";
+// bottomTaskbarElement.id = "eXelper-taskbar";
+// bottomTaskbarElement.style.width= "100%";
+// bottomTaskbarElement.style.height= "45px";
+// bottomTaskbarElement.style.backgroundImage= "linear-gradient(to right top, #403539CC, #453b41CC, #494248CC, #4e484fCC, #524f56CC);";
+// bottomTaskbarElement.style.backdropFilter= "blur(15px);";
+// bottomTaskbarElement.style.position= "fixed";
+// bottomTaskbarElement.style.bottom= "-44px";
+// bottomTaskbarElement.style.transitionDuration= "0.5s";
+// bottomTaskbarElement.style.borderTopLeftRadius= "25px";
+// bottomTaskbarElement.style.borderTopRightRadius= "25px";
 
-bottomTaskbarElement.addEventListener('mouseover', function() {
-  bottomTaskbarElement.style.bottom = '0';
-});
+// bottomTaskbarElement.addEventListener('mouseover', function() {
+//   bottomTaskbarElement.style.bottom = '0';
+// });
 
-bottomTaskbarElement.addEventListener('mouseout', function() {
-  bottomTaskbarElement.style.bottom = '-44px';
-});
+// bottomTaskbarElement.addEventListener('mouseout', function() {
+//   bottomTaskbarElement.style.bottom = '-44px';
+// });
 
 
 document.body.appendChild(bottomTaskbarElement);
