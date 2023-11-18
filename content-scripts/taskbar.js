@@ -1,11 +1,5 @@
 document.head.innerHTML += `
 <style>
-      html,
-      body,
-      head {
-        width: 100%;
-        margin: 0;
-      }
 
       #taskbar {
         width: 100%;
@@ -215,21 +209,6 @@ bottomTaskbarElement.innerHTML = `<div id="taskbar">
           </span>
         </span>
       </span>
-      <script>
-        const actualTime = document.getElementById("actual-time");
-
-        function setTime() {
-          const now = new Date();
-          const hours = now.getHours().toString().padStart(2, '0');
-          const minutes = now.getMinutes().toString().padStart(2, '0');
-          const seconds = now.getSeconds().toString().padStart(2, '0');
-          const time = \`\${hours}:\${minutes}\`; //\`:\${seconds}\`;
-
-          actualTime.innerText = time;
-        }
-        setInterval(setTime, 1000);
-
-      </script>
     </div>`;
 
 bottomTaskbarElement.style.position = 'fixed';
@@ -253,3 +232,18 @@ bottomTaskbarElement.addEventListener('mouseout', function() {
 });
 
 document.body.appendChild(bottomTaskbarElement);
+
+setTimeout (() => {
+const actualTime = document.getElementById("actual-time");
+
+        function setTime() {
+          const now = new Date();
+          const hours = now.getHours().toString().padStart(2, '0');
+          const minutes = now.getMinutes().toString().padStart(2, '0');
+          const seconds = now.getSeconds().toString().padStart(2, '0');
+          const time = `${hours}:${minutes}`; //`:${seconds}`;
+
+          actualTime.innerText = time;
+        }
+        setInterval(setTime, 1000);
+}, 250);
