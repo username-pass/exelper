@@ -225,15 +225,6 @@ bottomTaskbarElement.style.transitionDuration= "0.5s",
 bottomTaskbarElement.style.borderTopLeftRadius= "25px",
 bottomTaskbarElement.style.borderTopRightRadius= "25px"
 
-
-bottomTaskbarElement.addEventListener('mouseover', function() {
-  bottomTaskbarElement.style.bottom = '0';
-});
-
-bottomTaskbarElement.addEventListener('mouseout', function() {
-  bottomTaskbarElement.style.bottom = '-49px';
-});
-
 document.body.appendChild(bottomTaskbarElement);
 
 setTimeout (() => {
