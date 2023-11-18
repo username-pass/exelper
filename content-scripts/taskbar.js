@@ -8,7 +8,7 @@ taskbarStyleElement.innerHTML = `
         background-image: linear-gradient(to right top, #403539CC, #453b41CC, #494248CC, #4e484fCC, #524f56CC);
         backdrop-filter: blur(15px);
         position: fixed;
-        
+        left: 0;
         bottom: -44px;
         transition-duration: 0.5s;
         border-top-left-radius: 25px;
