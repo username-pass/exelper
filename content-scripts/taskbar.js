@@ -1,7 +1,7 @@
 document.head.innerHTML += `
 <style>
 
-      #taskbar {
+      #eXelper-taskbar {
         width: 100%;
         height: 45px;
         background-image: linear-gradient(to right top, #403539CC, #453b41CC, #494248CC, #4e484fCC, #524f56CC);
@@ -14,38 +14,38 @@ document.head.innerHTML += `
         border-top-right-radius: 25px;
       }
 
-      #taskbar:hover {
+      #eXelper-taskbar:hover {
         bottom: 0px;
         transition-duration: 0.5s;
       }
 
-      #taskbar * {
+      #eXelper-taskbar * {
         display: inline-block;
         user-select: none;
       }
 
-      .tb-icon {
+      .eXelper-tb-icon {
         width: 37px;
         height: 37px;
         margin-bottom: 2px;
       }
 
-      .middle-stuff {
+      .eXelper-middle-stuff {
         margin-right: 5px;
         width: calc(100% - 190px);
       }
 
-      .far-right-stuff {
+      .eXelper-far-right-stuff {
         float: right;
 
       }
 
-      #time-container {
+      #eXelper-time-container {
         background-color: rgba(255, 255, 255, 0.2);
         width: 120px;
         height: 35px;
         margin-top: 5px;
-        margin-right: 5px;
+        margin-right: 6px;
         border-radius: 40px;
         font-family: Verdana, sans-serif;
         font-size: 90%;
@@ -54,13 +54,13 @@ document.head.innerHTML += `
 
 
 
-      .left-icon {
+      .eXelper-left-icon {
         margin-bottom: 20px;
         position: relative;
         bottom: 2px;
       }
 
-      #actual-time {
+      #eXelper-actual-time {
         position: relative;
         bottom: 9px;
       }
@@ -77,12 +77,12 @@ document.head.innerHTML += `
 `
 var bottomTaskbarElement = document.createElement('div');
 
-bottomTaskbarElement.innerHTML = `<div id="taskbar">
+bottomTaskbarElement.innerHTML = `<div id="eXelper-taskbar">
 
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-      <span class="far-Left-stuff">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" style="margin-left:6px; margin-top: 4px;">
+      <span class="eXelper-far-Left-stuff">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" style="margin-left:2px; margin-top: 4px;">
           <!-- background circle -->
           <circle cx="20" cy="20" r="18" fill="rgba(255, 255, 255, 0.2)" class="hover-bright" />
 
@@ -95,38 +95,38 @@ bottomTaskbarElement.innerHTML = `<div id="taskbar">
 
 
       </span>
-      <center class="middle-stuff">
+      <center class="eXelper-middle-stuff">
         <span>
 
           <!-- Google Chrome -->
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 54" class="tb-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 52" class="tb-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 54" class="eXelper-tb-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 52" class="eXelper-tb-icon">
+              <defs>
+                <linearGradient id="a" x1="3.2173" y1="15" x2="44.7812" y2="15" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#b93025" />
+                  <stop offset="1" stop-color="#ca4335" />
+                </linearGradient>
+                <linearGradient id="b" x1="20.7219" y1="47.6791" x2="41.5039" y2="11.6837" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#fcc934" />
+                  <stop offset="1" stop-color="#fbbc04" />
+                </linearGradient>
+                <linearGradient id="c" x1="26.5981" y1="46.5015" x2="5.8161" y2="10.506" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#1e8e3e" />
+                  <stop offset="1" stop-color="#34a853" />
+                </linearGradient>
+
+              </defs>
+
+
+              <use xlink:href="#p" fill="url(#a)" transform="rotate(120 24 24)" />
+              <use xlink:href="#p" fill="url(#b)" transform="rotate(-120 24 24)" />
+              <use xlink:href="#p" fill="url(#c)" />
+
+              <circle cx="24" cy="24" r="12" style="fill:#fff" />
+              <circle cx="24" cy="24" r="9.5" style="fill:#1a73e8" />
+            </svg>
             <defs>
-              <linearGradient id="a" x1="3.2173" y1="15" x2="44.7812" y2="15" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="#b93025" />
-                <stop offset="1" stop-color="#ca4335" />
-              </linearGradient>
-              <linearGradient id="b" x1="20.7219" y1="47.6791" x2="41.5039" y2="11.6837" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="#fcc934" />
-                <stop offset="1" stop-color="#fbbc04" />
-              </linearGradient>
-              <linearGradient id="c" x1="26.5981" y1="46.5015" x2="5.8161" y2="10.506" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="#1e8e3e" />
-                <stop offset="1" stop-color="#34a853" />
-              </linearGradient>
-
-</defs>
-
-
-            <use xlink:href="#p" fill="url(#a)" transform="rotate(120 24 24)" />
-            <use xlink:href="#p" fill="url(#b)" transform="rotate(-120 24 24)" />
-            <use xlink:href="#p" fill="url(#c)" />
-
-            <circle cx="24" cy="24" r="12" style="fill:#fff" />
-            <circle cx="24" cy="24" r="9.5" style="fill:#1a73e8" />
-          </svg>
-          <defs>
-            <path id="p" d="M13.6086 30.0031 3.218 12.006A23.994 23.994 0 0 0 24.0025 48l10.3906-17.9971-.0067-.0068a11.9852 11.9852 0 0 1-20.7778.007Z" />
+              <path id="p" d="M13.6086 30.0031 3.218 12.006A23.994 23.994 0 0 0 24.0025 48l10.3906-17.9971-.0067-.0068a11.9852 11.9852 0 0 1-20.7778.007Z" />
               <linearGradient id="d" x1="0%" y1="0%" x2="0%" y2="100%">
                 <stop offset="0%" style="stop-color:white;stop-opacity:1" />
                 <stop offset="100%" style="stop-color:white;stop-opacity:1" />
@@ -136,7 +136,7 @@ bottomTaskbarElement.innerHTML = `<div id="taskbar">
             <rect x="12" y="51" width="24" height="3" rx="0.5" ry="0.5" fill="url(#d)" />
           </svg>
           <!-- Chrome Canvas -->
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink" class="tb-icon" viewBox="0 0 48 48">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink" class="eXelper-tb-icon" viewBox="0 0 48 48">
             <g>
               <path style="opacity:0.961" fill="#ea4536" d="M 16.5,1.5 C 29.8914,-0.722459 39.3914,4.27754 45,16.5C 47.717,29.9001 42.8836,39.4001 30.5,45C 17.0999,47.717 7.59994,42.8836 2,30.5C -0.586299,17.0057 4.24703,7.339 16.5,1.5 Z" />
             </g>
@@ -163,7 +163,7 @@ bottomTaskbarElement.innerHTML = `<div id="taskbar">
             </g>
           </svg>
           <!-- Play Store -->
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48" width="33" height="40" class="tb-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48" width="33" height="40" class="eXelper-tb-icon">
             <circle cx="24" cy="24" r="23" fill="white" />
 
             <svg xmlns="http://www.w3.org/2000/svg" x="9px" y="7px" viewBox="0 0 48 48" width="33" height="33">
@@ -196,10 +196,10 @@ bottomTaskbarElement.innerHTML = `<div id="taskbar">
 
         </span>
       </center>
-      <span class="far-right-stuff">
-        <span id="time-container">
+      <span class="eXelper-far-right-stuff">
+        <span id="eXelper-time-container">
           <span style="padding: 7.5px; padding-right: 0px; padding-left: 13px; height: 25px; width: calc(100% - 15px);">
-            <span class="left-icon" id="actual-time">12:30</span>
+            <span class="eXelper-left-icon" id="eXelper-actual-time">12:30</span>
             <span class="material-symbols-outlined left-icon" style="font-size: 22px; margin-left: 2px;">
               network_wifi_3_bar
             </span>
@@ -209,6 +209,7 @@ bottomTaskbarElement.innerHTML = `<div id="taskbar">
           </span>
         </span>
       </span>
+      
     </div>`;
 
 bottomTaskbarElement.style.position = 'fixed';
@@ -234,7 +235,7 @@ bottomTaskbarElement.addEventListener('mouseout', function() {
 document.body.appendChild(bottomTaskbarElement);
 
 setTimeout (() => {
-const actualTime = document.getElementById("actual-time");
+const actualTime = document.getElementById("eXelper-actual-time");
 
         function setTime() {
           const now = new Date();
