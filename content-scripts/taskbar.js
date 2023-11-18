@@ -1,3 +1,84 @@
+document.head.innerHTML += `
+<style>
+      html,
+      body,
+      head {
+        width: 100%;
+        margin: 0;
+      }
+
+      #taskbar {
+        width: 100%;
+        height: 45px;
+        background-image: linear-gradient(to right top, #403539, #453b41, #494248, #4e484f, #524f56);
+        position: fixed;
+        bottom: 0px;
+        transition-duration: 0.5s;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+      }
+
+      #taskbar:hover {
+        bottom: 0px;
+        transition-duration: 0.5s;
+      }
+
+      #taskbar * {
+        display: inline-block;
+        user-select: none;
+      }
+
+      .tb-icon {
+        width: 37px;
+        height: 37px;
+        margin-bottom: 2px;
+      }
+
+      .middle-stuff {
+        margin-right: 5px;
+        width: calc(100% - 190px);
+      }
+
+      .far-right-stuff {
+        float: right;
+
+      }
+
+      #time-container {
+        background-color: rgba(255, 255, 255, 0.2);
+        width: 120px;
+        height: 35px;
+        margin-top: 5px;
+        margin-right: 5px;
+        border-radius: 40px;
+        font-family: Verdana, sans-serif;
+        font-size: 90%;
+        color: white;
+      }
+
+
+
+      .left-icon {
+        margin-bottom: 20px;
+        position: relative;
+        bottom: 2px;
+      }
+
+      #actual-time {
+        position: relative;
+        bottom: 9px;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL'0,
+          'wght'400,
+          'GRAD'0,
+          'opsz'24
+      }
+
+    </style>
+`
 var bottomTaskbarElement = document.createElement('div');
 
 bottomTaskbarElement.innerHTML = `<div id="taskbar">
