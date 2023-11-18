@@ -20,7 +20,7 @@ taskbarStyleElement.innerHTML = `
         transition-duration: 0.5s;
       }
 
-      #eXelper-taskbar * {
+      #eXelper-taskbar > * {
         display: inline-block;
         user-select: none;
       }
