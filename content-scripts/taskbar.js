@@ -13,6 +13,7 @@ taskbarStyleElement.innerHTML = `
         transition-duration: 0.5s;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
+        z-index: 1e12;
       }
 
       #eXelper-taskbar:hover {
