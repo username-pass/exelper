@@ -1,6 +1,6 @@
 var taskbarStyleElement = document.createElement("style");
 taskbarStyleElement.innerHTML = `
-<style>
+
 
       #eXelper-taskbar {
         width: 100%;
@@ -20,7 +20,7 @@ taskbarStyleElement.innerHTML = `
         transition-duration: 0.5s;
       }
 
-      #eXelper-taskbar > * {
+      #eXelper-taskbar  * {
         display: inline-block;
         user-select: none;
       }
@@ -74,7 +74,6 @@ taskbarStyleElement.innerHTML = `
           'opsz'24
       }
 
-    </style>
 `
 document.head.appendChild(taskbarStyleElement);
 
