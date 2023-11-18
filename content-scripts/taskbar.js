@@ -215,15 +215,15 @@ bottomTaskbarElement.innerHTML = `
       `;
 
 bottomTaskbarElement.id = "eXelper-taskbar";
-bottomTaskbarElement.style.width= "100%",
-bottomTaskbarElement.style.height= "45px",
-bottomTaskbarElement.style.backgroundImage= "linear-gradient(to right top, #403539CC, #453b41CC, #494248CC, #4e484fCC, #524f56CC);",
-bottomTaskbarElement.style.backdropFilter= "blur(15px);",
-bottomTaskbarElement.style.position= "fixed",
-bottomTaskbarElement.style.bottom= "-44px",
-bottomTaskbarElement.style.transitionDuration= "0.5s",
-bottomTaskbarElement.style.borderTopLeftRadius= "25px",
-bottomTaskbarElement.style.borderTopRightRadius= "25px"
+bottomTaskbarElement.style.width= "100%";
+bottomTaskbarElement.style.height= "45px";
+bottomTaskbarElement.style.backgroundImage= "linear-gradient(to right top, #403539CC, #453b41CC, #494248CC, #4e484fCC, #524f56CC);";
+bottomTaskbarElement.style.backdropFilter= "blur(15px);";
+bottomTaskbarElement.style.position= "fixed";
+bottomTaskbarElement.style.bottom= "-44px";
+bottomTaskbarElement.style.transitionDuration= "0.5s";
+bottomTaskbarElement.style.borderTopLeftRadius= "25px";
+bottomTaskbarElement.style.borderTopRightRadius= "25px";
 
 bottomTaskbarElement.addEventListener('mouseover', function() {
   bottomTaskbarElement.style.bottom = '0';
