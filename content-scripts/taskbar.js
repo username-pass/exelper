@@ -29,6 +29,7 @@ taskbarStyleElement.innerHTML = `
         width: 37px;
         height: 37px;
         margin-bottom: 2px;
+        margin-left: 25px;
       }
 
       .eXelper-middle-stuff {
