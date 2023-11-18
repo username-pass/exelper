@@ -1,4 +1,5 @@
-document.head.innerHTML += `
+var taskbarStyleElement = document.createElement("style");
+taskbarStyleElement.innerHTML = `
 <style>
 
       #eXelper-taskbar {
@@ -233,6 +234,7 @@ bottomTaskbarElement.addEventListener('mouseout', function() {
 });
 
 document.body.appendChild(bottomTaskbarElement);
+document.body.appendChild(taskbarStyleElement);
 
 setTimeout (() => {
 const actualTime = document.getElementById("eXelper-actual-time");
