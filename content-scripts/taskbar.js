@@ -72,7 +72,9 @@ taskbarStyleElement.innerHTML = `
           'FILL'0,
           'wght'400,
           'GRAD'0,
-          'opsz'24
+          'opsz'24;
+        position: relative;
+        bottom: 3px;
       }
 
 `
@@ -204,7 +206,7 @@ bottomTaskbarElement.innerHTML = `
         <span id="eXelper-time-container">
           <span style="padding: 7.5px; padding-right: 0px; padding-left: 13px; height: 25px; width: calc(100% - 15px);">
             <span class="eXelper-left-icon" id="eXelper-actual-time">12:30</span>
-            <span class="material-symbols-outlined left-icon" style="font-size: 22px; margin-left: 2px;">
+            <span class="material-symbols-outlined left-icon" style="font-size: 22px; margin-left: 2px; bottom: 4px">
               network_wifi_3_bar
             </span>
             <span class="material-symbols-outlined left-icon">
