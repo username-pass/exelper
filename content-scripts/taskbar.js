@@ -10,8 +10,8 @@ document.head.innerHTML += `
       #taskbar {
         width: 100%;
         height: 45px;
-        background-image: linear-gradient(to right top, #403539E6, #453b41E6, #494248E6, #4e484fE6, #524f56E6);
-        backdrop-filter: blur(10px);
+        background-image: linear-gradient(to right top, #403539CC, #453b41CC, #494248CC, #4e484fCC, #524f56CC);
+        backdrop-filter: blur(15px);
         position: fixed;
         
         bottom: -44px;
