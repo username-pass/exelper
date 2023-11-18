@@ -76,9 +76,11 @@ taskbarStyleElement.innerHTML = `
 
     </style>
 `
+document.head.appendChild(taskbarStyleElement);
+
 var bottomTaskbarElement = document.createElement('div');
 
-bottomTaskbarElement.innerHTML = `<div id="eXelper-taskbar">
+bottomTaskbarElement.innerHTML = `
 
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
@@ -210,20 +212,9 @@ bottomTaskbarElement.innerHTML = `<div id="eXelper-taskbar">
           </span>
         </span>
       </span>
-      
-    </div>`;
+      `;
 
-bottomTaskbarElement.style.position = 'fixed';
-bottomTaskbarElement.style.bottom = '-49px';
-bottomTaskbarElement.style.left = '0';
-bottomTaskbarElement.style.zIndex = '9999';
-bottomTaskbarElement.style.margin = '0';
-bottomTaskbarElement.style.width = '100%';
-bottomTaskbarElement.style.height = '50px';
-
-bottomTaskbarElement.style.transition = 'bottom 0.5s';
-bottomTaskbarElement.style.borderTopLeftRadius = "20px";
-bottomTaskbarElement.style.borderTopRightRadius = "20px";
+bottomTaskbarElement.id = "eXelper-taskbar";
 
 bottomTaskbarElement.addEventListener('mouseover', function() {
   bottomTaskbarElement.style.bottom = '0';
@@ -234,7 +225,6 @@ bottomTaskbarElement.addEventListener('mouseout', function() {
 });
 
 document.body.appendChild(bottomTaskbarElement);
-document.head.appendChild(taskbarStyleElement);
 
 setTimeout (() => {
 const actualTime = document.getElementById("eXelper-actual-time");
