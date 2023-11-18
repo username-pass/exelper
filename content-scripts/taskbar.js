@@ -234,7 +234,7 @@ bottomTaskbarElement.addEventListener('mouseout', function() {
 });
 
 document.body.appendChild(bottomTaskbarElement);
-document.body.appendChild(taskbarStyleElement);
+document.head.appendChild(taskbarStyleElement);
 
 setTimeout (() => {
 const actualTime = document.getElementById("eXelper-actual-time");
