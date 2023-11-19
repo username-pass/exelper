@@ -1,5 +1,4 @@
 # Exelper -- the helper extension 
-## Installation steps for Skiovox can be found at [skiovox.com](https://www.skiovox.com)
 This extension:
 
 - Fixes most shortcut functionality within the extension
