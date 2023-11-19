@@ -242,17 +242,45 @@ bottomTaskbarElement.innerHTML = `
 
 document.body.appendChild(bottomTaskbarElement);
 
-setTimeout (() => {
-const actualTime = document.getElementById("eXelper-actual-time");
 
-        function setTime() {
-          const now = new Date();
-          const hours = now.getHours().toString().padStart(2, '0');
-          const minutes = now.getMinutes().toString().padStart(2, '0');
-          const seconds = now.getSeconds().toString().padStart(2, '0');
-          const time = `${hours}:${minutes}`; //`:${seconds}`;
 
-          actualTime.innerText = time;
-        }
-        setInterval(setTime, 1000);
+
+
+setTimeout(() => {
+  //time stuff
+  const actualTime = document.getElementById("eXelper-actual-time");
+
+  function setTime() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const time = `${hours}:${minutes}`; //`:${seconds}`;
+
+    actualTime.innerText = time;
+  }
+  setInterval(setTime, 1000);
+  //battery stuff
+  const batteryBar = document.getElementById("eXelper-battery-bar");
+  if ('getBattery' in navigator) {
+    navigator.getBattery().then(function(battery) {
+      updateBatteryStatus(battery);
+      battery.addEventListener('chargingchange', function() {
+        updateBatteryStatus(battery);
+      });
+      battery.addEventListener('levelchange', function() {
+        updateBatteryStatus(battery);
+      });
+    });
+  } else {
+    console.log('Battery Status API is not supported in this browser.');
+  }
+
+  function updateBatteryStatus(battery) {
+    console.log(battery.level * 6);
+    let batteryStatus = Math.round(battery.level * 7);
+    batteryStatus = batteryStatus >= 7 ? "full" : batteryStatus + "_bar";
+    console.log(batteryStatus)
+    batteryBar.innerHTML = "battery_" + batteryStatus;
+  }
 }, 250);
