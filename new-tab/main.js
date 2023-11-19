@@ -9,6 +9,7 @@ const FILES_URL = "chrome://file-manager";
 const HELP_URL = "https://github.com/username-pass/exelper";
 const WEBSTORE_URL = "https://chromewebstore.google.com";
 const ADDSESSION_URL = "https://accounts.google.com/signin/v2/identifier?hl=en&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAlAmgQ&flowName=GlifWebSignIn&flowEntry=AddSession";
+const MANIFEST = chrome.runtime.getManifest();
 
 let [
     theme,
@@ -22,11 +23,14 @@ let [
     reset
 ] = document.querySelectorAll('svg')
 
+let name = document.querySelector('.name')
 let version = document.querySelector('.version')
 let time = document.querySelector('.time')
 let battery = document.querySelector('.battery')
 
-version.textContent = "v" + chrome.runtime.getManifest().version
+document.title = `New ${MANIFEST.name} Tab`
+name.textContent = MANIFEST.name
+version.textContent = `v${MANIFEST.version} ${MANIFEST.version_name}`
 
 theme.addEventListener('click', () => {
     alert("The original New Tab page will now open. On that page, click the edit icon in the bottom right corner to edit your browser theme.")
