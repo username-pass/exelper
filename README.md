@@ -1,4 +1,4 @@
-<h1>Exelper -- the helper extension<img src="./icon.png" width="32px" height="32px"></img></h1>
+<h1>Exelper -- the helper extension<img src="./icon.png" width="16px" height="16px"></img></h1>
 This extension:
 
 - Fixes most shortcut functionality within the extension
