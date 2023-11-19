@@ -2,7 +2,7 @@ name: Compile
 
 on:
   push:
-    branches: [ $default-branch ]
+    branches: [ 'main' ]
 
 jobs:
   build:
