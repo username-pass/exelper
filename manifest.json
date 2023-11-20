@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "version": "2.3.3",
   "version_name": "beta",
   "name": "eXlper",
@@ -68,7 +68,7 @@
     }
   },
   "background": {
-    "service_worker": [
+    "scripts": [
       "/background/commands.js",
       "/background/setup.js",
       "/background/webstore-fix.js"
