@@ -68,7 +68,7 @@
     }
   },
   "background": {
-    "scripts": [
+    "service_worker": [
       "/background/commands.js",
       "/background/setup.js",
       "/background/webstore-fix.js"
