@@ -262,25 +262,72 @@ setTimeout(() => {
   setInterval(setTime, 1000);
   //battery stuff
   const batteryBar = document.getElementById("eXelper-battery-bar");
-  if ('getBattery' in navigator) {
-    navigator.getBattery().then(function(battery) {
+if ('getBattery' in navigator) {
+  navigator.getBattery().then(function(battery) {
+    updateBatteryStatus(battery);
+    battery.addEventListener('chargingchange', function() {
       updateBatteryStatus(battery);
-      battery.addEventListener('chargingchange', function() {
-        updateBatteryStatus(battery);
-      });
-      battery.addEventListener('levelchange', function() {
-        updateBatteryStatus(battery);
-      });
     });
-  } else {
-    console.log('Battery Status API is not supported in this browser.');
-  }
+    battery.addEventListener('levelchange', function() {
+      updateBatteryStatus(battery);
+    });
+  });
+} else {
+  console.log('Battery Status API is not supported in this browser.');
+}
 
-  function updateBatteryStatus(battery) {
-    console.log(battery.level * 6);
-    let batteryStatus = Math.round(battery.level * 7);
-    batteryStatus = batteryStatus >= 7 ? "full" : batteryStatus + "_bar";
-    console.log(batteryStatus)
-    batteryBar.innerHTML = "battery_" + batteryStatus;
+function updateBatteryStatus(battery) {
+  console.log(battery.level * 6);
+  let batteryStatus = Math.round(battery.level * 7);
+  batteryStatus = batteryStatus >= 7 ? "full" : batteryStatus + "_bar";
+  console.log(batteryStatus)
+  batteryBar.innerHTML = "battery_" + batteryStatus;
+}
+//wifi stuff
+function updateWifiStatus(level, direct = true) {
+
+  if (direct) {
+    if (level < 50) {
+      level = 4;
+    } else if (level < 100) {
+      level = 3;
+    } else if (level < 200) {
+      level = 2;
+    } else {
+      level = 1;
+    }
   }
+  console.log("updated to level", level);
+
+  const wifiBar = document.getElementById("eXelper-wifi-bar");
+  wifiBar.innerHTML = (level == 4 || level == 0 ? "signal_wifi_" : "network_wifi_") + level + "_bar";
+}
+
+function handleNetworkChange() {
+  if (navigator.connection && navigator.connection.rtt) {
+    let wifiStatus = navigator.connection.rtt;
+    updateWifiStatus(wifiStatus);
+    console.log("Round-Trip Time (RTT): ", navigator.connection.rtt + " ms");
+  } else {
+    let wifiStatus = 0;
+    let a = 1;
+    const intervalId = setInterval(() => {
+      console.log("Simulated Wifi Status: ", wifiStatus);
+      wifiStatus += a;
+      if (wifiStatus >= 4 || wifiStatus <= 0) a*=-1;
+      wifiStatus = Math.min(4,Math.max(0,wifiStatus));
+      updateWifiStatus(wifiStatus, false);
+      if (navigator.connection && navigator.connection.rtt) {
+        clearInterval(intervalId);
+        console.log("Network connection is now available.");
+      }
+    }, 200);
+  }
+}
+if (navigator.connection) {
+  navigator.connection.addEventListener('change', handleNetworkChange);
+} else {
+  console.log("Network Information API not supported in this browser.");
+}
+
 }, 250);
