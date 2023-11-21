@@ -208,10 +208,10 @@ bottomTaskbarElement.innerHTML = `
         <span id="eXelper-time-container">
           <span style="padding: 7.5px; padding-right: 0px; padding-left: 13px; height: 25px; width: calc(100% - 15px);">
             <span class="eXelper-left-icon" id="eXelper-actual-time">12:30</span>
-            <span class="material-symbols-outlined left-icon" style="font-size: 22px; margin-left: 2px; bottom: 4px">
+            <span class="material-symbols-outlined left-icon" style="font-size: 22px; margin-left: 2px; bottom: 4px" id="eXelper-wifi-bar">
               network_wifi_3_bar
             </span>
-            <span class="material-symbols-outlined left-icon">
+            <span class="material-symbols-outlined left-icon" id="eXelper-battery-bar">
               battery_6_bar
             </span>
           </span>
