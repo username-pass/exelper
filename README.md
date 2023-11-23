@@ -6,3 +6,6 @@ This extension:
 - Makes it easier to add Google accounts and use the Web Store within the extension
 
 *Note: You can exit fullscreen videos by pressing ctrl+T after you've set up the shortcuts*
+
+
+([Original extension](https://skiovox.com))
