@@ -8,4 +8,4 @@ This extension:
 *Note: You can exit fullscreen videos by pressing ctrl+T after you've set up the shortcuts*
 
 
-([Original extension](https://skiovox.com))
+([Original extension](https://github.com/bypassiwastaken/skiovox-helper))
