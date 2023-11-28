@@ -83,6 +83,7 @@ taskbarStyleElement.innerHTML = `
 document.head.appendChild(taskbarStyleElement);
 
 var bottomTaskbarElement = document.createElement('div');
+bottomTaskbarElement.style.zIndex = 1e12;
 
 bottomTaskbarElement.innerHTML = `
 <div id="eXelper-taskbar">
