@@ -90,6 +90,12 @@ async function onCommand(name, currentTab) {
       })
       break;
 
+    case "RESIZE_LEFT_HALF":
+      //TODO
+      break;
+    case "RESIZE_RIGHT_HALF":
+      break;
+
     case "CTRL_1":
     case "CTRL_2":
     case "CTRL_3":
